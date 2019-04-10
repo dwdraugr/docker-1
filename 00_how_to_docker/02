@@ -1,1 +1,2 @@
 docker-machine ip Char
+# ip - get ip address of machine with name Char

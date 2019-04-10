@@ -1,1 +1,4 @@
 docker volume create hatchery
+# volume		- manage volumes
+# create		- create a volume
+# hatchery		- name of new volume

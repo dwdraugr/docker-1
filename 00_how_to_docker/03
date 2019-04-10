@@ -1,1 +1,3 @@
 eval $(docker-machine env Char)
+# env - display the commands to set up the environment for the Docker client
+# just copy output

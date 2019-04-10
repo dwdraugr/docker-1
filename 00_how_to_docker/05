@@ -1,1 +1,2 @@
 docker run hello-world
+# run - run a command in a new container and loading it if necessary

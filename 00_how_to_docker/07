@@ -1,1 +1,4 @@
 docker inspect -f "{{ .NetworkSettings.IPAddress }}" overlord
+# inspect		- return low-level information on Docker objects
+# -f			- Format the output using the given Go template
+# "{{ ... }}"	- template to get IP address

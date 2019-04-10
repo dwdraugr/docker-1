@@ -1,1 +1,3 @@
 docker pull hello-world
+# pull - pull image or a repo from a registry
+# only pull, without install

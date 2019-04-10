@@ -1,1 +1,7 @@
 docker run -it --rm alpine /bin/sh
+# run		- described above
+# -i		- keep STDIN open even if not attached
+# -t		- allocate a pseudo-TTY
+# --rm		- automatically remove the container when it exits
+# alpine	- name of image
+# /bin/sh	- name of shell into container
