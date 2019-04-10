@@ -1,0 +1,3 @@
+docker inspect -f "{{ .Config.Env }}" spawning-pool
+
+# similar to 07
