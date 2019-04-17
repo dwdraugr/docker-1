@@ -1,6 +1,16 @@
-FROM ruby
-EXPOSE 3000
-WORKDIR /opt/app
-RUN apt-get update && apt-get install nodejs -y && gem install rails -v 5.0.2 && \
-    rails new server && cd server && bundle && \
-    rake db:migrate && rake db:seed
+FROM	ruby
+RUN		apt-get update -y && \
+		apt-get upgrade -y && \
+		apt-get install -y sqlite3 nodejs yarn
+
+#	sqlite3		предпочитаемая БД для Ruby-On-Rails
+#	nodejs		пакет-установщик для исполнения javascript-кода; нужен для некоторых gem-ов
+
+ONBUILD COPY	app /opt/app
+ONBUILD WORKDIR	/opt/app
+ONBUILD RUN		bundle install
+ONBUILD RUN		bundle exec rake db:migrate
+ONBUILD RUN		bundle exec rake db:seed
+ONBUILD EXPOSE	3000
+
+#	docker build -t ft-rails:on-build .
